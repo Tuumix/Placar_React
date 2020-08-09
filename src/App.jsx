@@ -1,17 +1,14 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import Placar1 from './componentes/placar'
 import Placar2 from './componentes/placar'
 import './App.css'
-import {TextField} from '@material-ui/core';
+import {TextField, Button} from '@material-ui/core';
+
 
 export default() => {
-    const [pontuacao, setPontos] = useState(0)
     const [team1, setTeam1] = useState('');
     const [team2, setTeam2] = useState('');
-
-    const styles = {
-        color: 'pink'
-    }
+    const ref = useRef(null);
 
     return (
         <div className="Main">
@@ -57,9 +54,10 @@ export default() => {
                     onInput={e => setTeam2(e.target.value)}/>
             </div>
             <div className="grid-placar">
-                <Placar1 color="#273c75" team={team1}/>
-                <Placar2 color="#3c6382" team={team2}/>
+                <Placar1 color="#273c75" team={team1} ref={ref}/>
+                <Placar2 color="#3c6382" team={team2} ref={ref}/>
             </div>
+            <Button size="large" onClick={() =>{ref.current.zerar()}}>Botao</Button>
         </div>
     )
 }

@@ -1,16 +1,26 @@
-import React, {useState} from 'react'
+import React, {useState, useImperativeHandle, forwardRef} from 'react'
 import './placar.css'
-import { Button } from '@material-ui/core';
+import { Button } from '@material-ui/core'
 
-export default (param) => {
+export default forwardRef((param, ref) => {
     const [pontuacao,setPonto] = useState(0);
+
+    const zerar = () =>{
+        setPonto(99);
+    }
+
+    useImperativeHandle(ref, () => {
+        return {
+         zerar: zerar
+        }
+     });
 
     function subtrai_ponto(){
         if(pontuacao > 0){
             setPonto(pontuacao - 1);
         }
-    }
-
+    };
+    
     return (
         <div className="placar" style={{backgroundColor: param.color}}>
             <h2>{param.team}</h2>
@@ -22,5 +32,5 @@ export default (param) => {
                 <Button style={{backgroundColor:'#16db93', fontSize:'40px'}} size="large" onClick={() => setPonto(pontuacao + 1)}>+</Button>
             </div>
         </div>
-    )
-}
+    );
+});
