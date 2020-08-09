@@ -6,7 +6,7 @@ export default forwardRef((param, ref) => {
     const [pontuacao,setPonto] = useState(0);
 
     const zerar = () =>{
-        setPonto(99);
+        setPonto(0);
     }
 
     useImperativeHandle(ref, () => {
@@ -20,7 +20,7 @@ export default forwardRef((param, ref) => {
             setPonto(pontuacao - 1);
         }
     };
-    
+
     return (
         <div className="placar" style={{backgroundColor: param.color}}>
             <h2>{param.team}</h2>

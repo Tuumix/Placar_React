@@ -57,7 +57,7 @@ export default() => {
                 <Placar1 color="#273c75" team={team1} ref={ref}/>
                 <Placar2 color="#3c6382" team={team2} ref={ref}/>
             </div>
-            <Button size="large" onClick={() =>{ref.current.zerar()}}>Botao</Button>
+            <Button size="large" onClick={() =>{ref.current.zerar()}}>Resetar</Button>
         </div>
     )
 }

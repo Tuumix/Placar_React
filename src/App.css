@@ -19,11 +19,3 @@
     align-items: center;
     justify-content: center;
 }
-
-.times_nome{
-    display: flex;
-}
-
-.TextField{
-    InputLabelProps: 'pink'
-}
