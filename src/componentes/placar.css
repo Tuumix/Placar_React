@@ -1,12 +1,19 @@
 h1{
     font-size: 100px;
-    color: #c7ecee;
+    color: #dff9fb;
 }
 
 h2{
+    color: #dff9fb;
     font-size: 50px;
-    color: #c7ecee;
 }
+
+@media only screen and (max-width: 1610px) {
+    h2 {
+        font-size: 30px;
+        color: #dff9fb;
+    }
+  }
 
 .placar{
     display: flex;

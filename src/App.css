@@ -20,6 +20,10 @@
     justify-content: center;
 }
 
-.grid-baixo{
+.times_nome{
     display: flex;
+}
+
+.TextField{
+    InputLabelProps: 'pink'
 }
