@@ -9,11 +9,14 @@ export default forwardRef((param, ref) => {
         setPonto(0);
     }
 
-    useImperativeHandle(ref, () => {
-        return {
-         zerar: zerar
-        }
-     });
+    useImperativeHandle(
+        ref,
+        () => ({
+            zerar() {
+                setPonto(0)
+            }
+        }),
+    )
 
     function subtrai_ponto(){
         if(pontuacao > 0){
@@ -24,9 +27,7 @@ export default forwardRef((param, ref) => {
     return (
         <div className="placar" style={{backgroundColor: param.color}}>
             <h2>{param.team}</h2>
-            <div className="placar-top">
-                <h1>{pontuacao}</h1>
-            </div>
+            <h1>{pontuacao}</h1>
             <div className="btn-placar">
                 <Button style={{backgroundColor:'#f94144', fontSize:'60px'}} size="large" onClick={subtrai_ponto}>-</Button>
                 <Button style={{backgroundColor:'#16db93', fontSize:'40px'}} size="large" onClick={() => setPonto(pontuacao + 1)}>+</Button>
