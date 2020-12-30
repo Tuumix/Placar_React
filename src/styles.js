@@ -12,3 +12,10 @@ export const ScoreContainer = styled.div`
         flex-direction: column;
     }
 `
+
+export const ButtonContainer = styled.div`
+    margin-left: 20px;
+    @media (max-width: 700px) {
+        margin-top: 20px;
+    }
+`

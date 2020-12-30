@@ -28,7 +28,7 @@ export const SubContainer = styled.div`
 `
 
 export const Pontuacao = styled.p`
-    font-size: 25px;
+    font-size: 40px;
     font-weight: bold;
     color: ${({theme}) => theme.textColor}
 `

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 
@@ -11,9 +11,11 @@ import {
 
 export default function Score(props) {
     const {pontuacao, callback} = props;
+    const [nomeTime, setNome] = useState('');
+
     return (
         <Container>
-            <TextField id="standard-basic" label="Team Name" />
+            <TextField id="standard-basic" label="Team Name" onChange={(e) => setNome(e.target.value)}/>
             <SubContainer>
                 <Pontuacao>{pontuacao}</Pontuacao>
             </SubContainer>

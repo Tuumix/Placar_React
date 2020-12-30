@@ -6,6 +6,7 @@ export const Container = styled.div`
     background-color: ${({theme}) => theme.headerColor};
     padding: 16px;
     align-items: center;
+    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.04);
 `
 
 export const SubContainer = styled.div`
