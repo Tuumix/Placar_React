@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
 
 import {
     Container,
@@ -9,13 +8,12 @@ import {
     ButtonContainer
 } from './styles';
 
-export default function Score(props) {
+function Score(props) {
     const {pontuacao, callback} = props;
-    const [nomeTime, setNome] = useState('');
 
+    console.log('renderinzando');
     return (
         <Container>
-            <TextField id="standard-basic" label="Team Name" onChange={(e) => setNome(e.target.value)}/>
             <SubContainer>
                 <Pontuacao>{pontuacao}</Pontuacao>
             </SubContainer>
@@ -37,3 +35,5 @@ export default function Score(props) {
         </Container>
     )
 }
+
+export default React.memo(Score);
