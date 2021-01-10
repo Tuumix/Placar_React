@@ -4,7 +4,12 @@ import {GlobalStyle} from './Themes/GlobalStyle';
 import {ThemeProvider} from 'styled-components';
 import { lightTheme, darkTheme } from './Themes/theme';
 import Score from './componentes/Score';
-import {ScoreContainer, ButtonContainer} from './styles';
+import {
+    ScoreContainer,
+    ButtonContainer,
+    DevelopedTitleContainer,
+    DevelopedTitle
+} from './styles';
 import Button from '@material-ui/core/Button';
 
 export default function App(){
@@ -33,6 +38,11 @@ export default function App(){
                     >Reset</Button>
                 </ButtonContainer>
             </ScoreContainer>
+            <DevelopedTitleContainer>
+                <DevelopedTitle>
+                    Developed by Tuumi :)
+                </DevelopedTitle>
+            </DevelopedTitleContainer>
         </ThemeProvider>
     )
 }
