@@ -7,4 +7,4 @@ To run this on your machine, first you will need to install the dependecies with
 And then you just need to start the project with the following command:
   yarn start.
   
-If you don't wanna run this project on your machine, it's deployed here: https://5ffb58ef768e2d0008597e16--focused-mirzakhani-8a4277.netlify.app/
+If you don't wanna run this project on your machine, it's deployed here: https://tuumix-scores.netlify.app/
