@@ -27,13 +27,17 @@ export const SubContainer = styled.div`
     justify-content: center;
 `
 
-export const Pontuacao = styled.p`
+export const TextPoint = styled.p`
     font-size: 40px;
     font-weight: bold;
-    color: ${({theme}) => theme.textColor}
+    color: ${({theme}) => theme.textColor};
 `
 
 export const ButtonContainer = styled.div`
     display: flex;
     justify-content:space-around;
+`
+
+export const Title = styled.h1`
+    font-weight: bold;
 `

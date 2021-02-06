@@ -7,8 +7,9 @@ import {
     ScoreSpan,
     BtnTheme
 } from './styles'
+import { HeaderProps } from './types';
 
-export default function Header(props) {
+const Header: React.FC<HeaderProps> = (props) => {
     const { value, callback } = props;
 
     return (
@@ -16,9 +17,12 @@ export default function Header(props) {
             <SubContainer>
                 <ScoreSpan>Score</ScoreSpan>
                 <BtnTheme onClick={() => callback(!value)}>
-                    {value ? <EmojiObjectsIcon fontSize='large' style={{color: '#353b48'}}/> : <WbIncandescentIcon fontSize='large' style={{color: '#f5f6fa'}} />}
+                    {value ? 
+                        <EmojiObjectsIcon fontSize='large' style={{color: '#353b48'}}/> : <WbIncandescentIcon fontSize='large' style={{color: '#f5f6fa'}} />}
                 </BtnTheme>
             </SubContainer>
         </Container>
     )
 }
+
+export default Header;
