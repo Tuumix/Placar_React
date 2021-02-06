@@ -25,6 +25,11 @@ export default function App(){
                 <Score point={point1} callback={setPoint1} />
                 <Score point={point2} callback={setPoint2} />
             </ScoreContainer>
+            <DevelopedTitleContainer>
+                <DevelopedTitle>
+                    Developed by Tuumi :)
+                </DevelopedTitle>
+            </DevelopedTitleContainer>
         </ThemeProvider>
     )
 }
