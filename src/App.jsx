@@ -4,8 +4,11 @@ import {GlobalStyle} from './Themes/GlobalStyle';
 import {ThemeProvider} from 'styled-components';
 import { lightTheme, darkTheme } from './Themes/theme';
 import Score from './componentes/Score';
-import { ScoreContainer } from './styles';
-import Button from './componentes/Button';
+import { 
+    ScoreContainer,
+    DevelopedTitleContainer,
+    DevelopedTitle
+ } from './styles';
 
 export default function App(){
     const [point1, setPoint1] = useState(0);
