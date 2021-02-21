@@ -27,7 +27,7 @@ export const SubContainer = styled.div`
     justify-content: center;
 `
 
-export const Pontuacao = styled.p`
+export const Point = styled.label`
     font-size: 40px;
     font-weight: bold;
     color: ${({theme}) => theme.textColor}

@@ -1,36 +1,37 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-
 import {
     Container,
     SubContainer,
-    Pontuacao,
+    Point,    
     ButtonContainer
 } from './styles';
+import { ScoreProps } from './types';
 
-function Score(props) {
-    const {pontuacao, callback} = props;
-
-    console.log('renderinzando');
+const Score: React.FC<ScoreProps> = ({ point, callback}) => {
     return (
         <Container>
             <SubContainer>
-                <Pontuacao>{pontuacao}</Pontuacao>
+                <Point>{point}</Point>
             </SubContainer>
             <ButtonContainer>
                 <Button 
                     fullWidth={true}
                     variant="outlined" 
                     color="secondary" 
-                    onClick={() => pontuacao > 0 && callback(pontuacao - 1)}
-                >-</Button>  
+                    onClick={() => point > 0 && callback(point - 1)}
+                >
+                    -
+                </Button>  
                 <Button 
                     style={{marginLeft: 10}}
                     fullWidth={true} 
                     variant="outlined" 
                     color="primary" 
-                    onClick={() => callback(pontuacao + 1)}
-                >+</Button>  
+                    onClick={() => callback(point + 1)}
+                >
+                    +
+                </Button>  
             </ButtonContainer>
         </Container>
     )

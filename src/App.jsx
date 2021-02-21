@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Header from './componentes/Header';
-import {GlobalStyle} from './Themes/GlobalStyle';
-import {ThemeProvider} from 'styled-components';
+import { GlobalStyle } from './Themes/GlobalStyle';
+import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './Themes/theme';
 import Score from './componentes/Score';
 import {
@@ -10,32 +10,27 @@ import {
     DevelopedTitleContainer,
     DevelopedTitle
 } from './styles';
-import Button from '@material-ui/core/Button';
+import Button from './componentes/Button';
 
-export default function App(){
-    const [ponto1, setPonto1] = useState(0);
-    const [ponto2, setPonto2] = useState(0);
+const App = () => {
+    const [firstScore, setFirstScore] = useState(0);
+    const [secondScore, setSecondScore] = useState(0);
     const [theme, setTheme] = useState(false);
 
-    function ZerarPontos() {
-        setPonto1(0);
-        setPonto2(0);
+    function resetPoints() {
+        setFirstScore(0);
+        setSecondScore(0);
     }
 
     return (
         <ThemeProvider theme={theme ? lightTheme : darkTheme}>
             <GlobalStyle />
-            <Header value={theme} callback={setTheme}/>
+            <Header value={theme} callback={setTheme} />
             <ScoreContainer>
-                <Score pontuacao={ponto1} callback={setPonto1} />
-                <Score pontuacao={ponto2} callback={setPonto2} />
+                <Score point={firstScore} callback={setFirstScore} />
+                <Score point={secondScore} callback={setSecondScore} />
                 <ButtonContainer>
-                    <Button 
-                        variant="contained"
-                        size="small" 
-                        color="primary" 
-                        onClick={ZerarPontos}
-                    >Reset</Button>
+                    <Button title="Reset" callback={resetPoints} />
                 </ButtonContainer>
             </ScoreContainer>
             <DevelopedTitleContainer>
@@ -46,3 +41,5 @@ export default function App(){
         </ThemeProvider>
     )
 }
+
+export default App;
