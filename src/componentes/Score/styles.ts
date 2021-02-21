@@ -30,10 +30,14 @@ export const SubContainer = styled.div`
 export const Point = styled.label`
     font-size: 40px;
     font-weight: bold;
-    color: ${({theme}) => theme.textColor}
+    color: ${({theme}) => theme.textColor};
 `
 
 export const ButtonContainer = styled.div`
     display: flex;
     justify-content:space-around;
+`
+
+export const Title = styled.h1`
+    font-weight: bold;
 `

@@ -6,7 +6,6 @@ import { lightTheme, darkTheme } from './Themes/theme';
 import Score from './componentes/Score';
 import {
     ScoreContainer,
-    ButtonContainer,
     DevelopedTitleContainer,
     DevelopedTitle
 } from './styles';
